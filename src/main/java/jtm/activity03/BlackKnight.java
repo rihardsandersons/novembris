@@ -22,6 +22,11 @@ public class BlackKnight {
 	public static void setBattle(int initialNumber) {
 		// TODO initialize new array of knights with the passed size.
 		// Reset total numbers of total and alive knights to zero
+
+		knights = new BlackKnight[initialNumber];
+		totalKnights = 0;
+		aliveKnights = 0;
+
 	}
 
 	public BlackKnight(String name) {
@@ -31,8 +36,17 @@ public class BlackKnight {
 		// 3. put reference of this knight into next free cell of knights static
 		// array
 		// 4. increase number of total and alive knights of static counters
-		// HINT: use "this.name" to access name of knight which otherwise is shadowed
+		// HINT: use "this.name" to access name of knight which otherwise is
+		// shadowed
 		// by parameter of constructor, which is also called "name"
+		this.name = name;
+		arms = 2;
+		legs = 2;
+		head = 1;
+		alive = true;
+		knights[totalKnights] = this;
+		totalKnights++;
+		aliveKnights++;
 	}
 
 	public String cutOffArm() {
@@ -40,7 +54,14 @@ public class BlackKnight {
 		// If knight is dead, return "Only chicken beats dead!"
 		// If knight has some arms, cut one off and return "Bugger!"
 		// Else return just "Haah!"
-		return "";
+
+		if (alive == false)
+			return "Only chicken beats dead!";
+		if (arms > 0) {
+			this.arms--;
+			return "Bugger!";
+		} else
+			return "Haah!";
 	}
 
 	public String cutOffLeg() {
@@ -48,7 +69,13 @@ public class BlackKnight {
 		// If knight is dead, return "Only chicken beats dead!"
 		// If knight has some legs, cut one off and return "Bollocks!"
 		// Else return just "Haah!"
-		return "";
+		if (alive == false)
+			return "Only chicken beats dead!";
+		if (this.legs > 0) {
+			this.legs--;
+			return "Bollocks!";
+		} else
+			return "Haah!";
 	}
 
 	public String cutOffHead() {
@@ -60,7 +87,26 @@ public class BlackKnight {
 		// "You'l newer win! Arthur, Cnut will still fight!"
 		// Where "Arthur, Cnut" are names of still alive knights
 		// Else return "You'l burn in hell forever!"
-		return "";
+		if (alive == false)
+			return "Only chicken beats dead!";
+		if (alive == true) {
+			alive = false;
+			this.head--;
+			deadKnights++;
+			aliveKnights--;
+		}
+		int i = 0;
+		String[] knightNames = new String[aliveKnights];
+		if (aliveKnights > 0) {
+			for (BlackKnight arr : knights) {
+				if (arr.alive) {
+					knightNames[i] = arr.name;
+				i++;
+				}
+			}
+			String prints = String.join(", ", knightNames);
+			return "You'l newer win! " + prints + " will still fight!";
+		} else
+			return "You'l burn in hell forever!";
 	}
-
 }
