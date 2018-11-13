@@ -21,7 +21,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>jtm</groupId>
-			<artifactId>nGM7</artifactId>
+			<artifactId>jtm</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
 			<systemPath>${basedir}/lib/JTM.jar</systemPath>
