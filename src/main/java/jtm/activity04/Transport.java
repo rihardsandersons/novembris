@@ -11,6 +11,10 @@ public class Transport {
 		this.fuelInTank = tankSize;
 	}
 
+	public Transport(String id) {
+		this.id = id;
+	}
+
 	// Do not change access modifiers to encapsulate internal properties!
 	private String id; // Transport registration number
 	private float consumption; // fuel consumption in litres per 100km
@@ -92,7 +96,7 @@ public class Transport {
 	public String move(Road road) {
 
 		float fuelConsumed = road.getDistance() * this.consumption / 100;
-		if (fuelConsumed <= this.getFuelInTank()) {
+		if (fuelConsumed <= this.getFuelInTank() && road.getClass() == Road.class) {
 			this.fuelInTank = this.fuelInTank - fuelConsumed;
 			return this.getType() + " is moving on " + road;
 		} else {

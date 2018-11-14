@@ -12,8 +12,8 @@ public class WaterRoad extends Road {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub WaterRoad From — To, 00km
-		return "WaterRoad " + super.getFrom() + " — " + super.getTo() + ", "
-				+ super.getDistance() + "km";
+		return "WaterRoad " + getFrom() + " — " + getTo() + ", "
+				+ getDistance() + "km";
 	}
 
 	public WaterRoad() {
