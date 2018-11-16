@@ -14,13 +14,6 @@
       <x="316"/>
       <y="74"/>
    </type>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=nGM7/src\/main\/java<jtm.activity07{Mammal.java[Mammal"/>
-      <targetType="=nGM7/src\/main\/java<jtm.activity07{Animal.java[Animal"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
    <type>
       <name="=nGM7/src\/main\/java<jtm.activity07{Bird.java[Bird"/>
       <height="-1"/>
@@ -28,13 +21,6 @@
       <x="41"/>
       <y="257"/>
    </type>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=nGM7/src\/main\/java<jtm.activity07{Bird.java[Bird"/>
-      <targetType="=nGM7/src\/main\/java<jtm.activity07{Animal.java[Animal"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
    <type>
       <name="=nGM7/src\/main\/java<jtm.activity07{Dog.java[Dog"/>
       <height="116"/>
@@ -51,8 +37,29 @@
    </type>
    <relationship>
       <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=nGM7/src\/main\/java<jtm.activity07{Dog.java[Dog"/>
+      <targetType="=nGM7/src\/main\/java<jtm.activity07{Mammal.java[Mammal"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=nGM7/src\/main\/java<jtm.activity07{Mammal.java[Mammal"/>
+      <targetType="=nGM7/src\/main\/java<jtm.activity07{Animal.java[Animal"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
       <sourceType="=nGM7/src\/main\/java<jtm.activity07{Hawk.java[Hawk"/>
       <targetType="=nGM7/src\/main\/java<jtm.activity07{Bird.java[Bird"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=nGM7/src\/main\/java<jtm.activity07{Bird.java[Bird"/>
+      <targetType="=nGM7/src\/main\/java<jtm.activity07{Animal.java[Animal"/>
       <bendpoints>
       </bendpoints>
    </relationship>
