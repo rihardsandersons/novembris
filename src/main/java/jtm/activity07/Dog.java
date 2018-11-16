@@ -18,7 +18,6 @@ public class Dog extends Mammal {
 	}
 
 	public void setName(String name) {
-		// if (name.matches("[a-zA-Z]+")) 
 		if (Character.isUpperCase(name.charAt(0)) && name.chars().allMatch(Character::isLetter)) {
 			this.name = name;
 		} else

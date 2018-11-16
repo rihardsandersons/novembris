@@ -1,6 +1,6 @@
 package jtm.activity08;
 
-// TODO implement basic mathematical operations with int numbers in range
+// implement basic mathematical operations with int numbers in range
 // of [-10..+10] (including)
 // Note that:
 // 1. input range is checked using assertions (so if they are disabled, inputs can be any int)
@@ -127,7 +127,6 @@ public class SimpleCalc {
 			}
 
 			return result;
-
 		}
 
 		return 0;

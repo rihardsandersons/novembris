@@ -2,9 +2,9 @@ package jtm.activity06;
 
 public class Human implements Humanoid {
 
-	String backpack = null;
-	private int weight;
-	public String alive = "Alive";
+	String backpack;
+	int weight;
+	String alive = "Alive";
 
 	public Human() {
 		this.setWeight(this.weight = 42);
@@ -42,9 +42,9 @@ public class Human implements Humanoid {
 	}
 
 	@Override
-	public Object getBackpack() {
+	public String getBackpack() {
 
-		return this.backpack;
+		return backpack;
 	}
 
 	@Override

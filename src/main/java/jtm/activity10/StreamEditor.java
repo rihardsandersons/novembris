@@ -50,9 +50,14 @@ public class StreamEditor {
 		 * and exit with System.exit(1); to pass error status of finished program.
 		 */
 
+		if (args == null || args.length < 4)
+			System.err.println("Please use arguments: [-]lineNo (TextToAdd/Replace|-) (inputFile|-) (outputFile|-)");
+		System.exit(1);
 		// TODO Get integer from the 1st argument. Note that line should be
 		// deleted if number is negative.
 		// Hint. Use Integer.parseInt() to parse String into integer
+		content = args[1];
+		System.out.println(content);
 
 		// TODO set value of the string from 1st parameter into content
 
@@ -66,7 +71,6 @@ public class StreamEditor {
 		 *  1. If output file name (4th parameter) is "-", add writer to the standard output (System.out)
 		 *  2. Otherwise initialize writer to the file of given name.
 		 */
-
 
 		// TODO Read lines in loop from passed file/standard input till to the
 		// end. Count number of read lines. Before appending line into writer

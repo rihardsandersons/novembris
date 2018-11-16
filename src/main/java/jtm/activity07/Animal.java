@@ -9,14 +9,10 @@ package jtm.activity07;
  */
 public class Animal {
 
-
 	private int Age;
 
-
 	public Animal() {
-		// TODO Auto-generated constructor stub
 	}
-
 
 	public void setAge(int age) {
 		if (age > 0) {

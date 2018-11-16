@@ -8,8 +8,7 @@ package jtm.activity09;
  * - public Order(String orderer, String itemName, Integer count) — constructor of the Order
  * - public int compareTo(Order order) — comparison implementation according to logic described below
  * - public boolean equals(Object object) — check equality of orders
- * - public int hashCode() — to be able to handle it in some hash... collection 
- * - public String toString() — string in following form: "ItemName: OrdererName: Count"
+ * - public int hashCode() — tC string in following form: "ItemName: OrdererName: Count"
  * 
  * Hints:
  * 1. When comparing orders, compare their values in following order:
@@ -25,9 +24,48 @@ package jtm.activity09;
  * 
  */
 
-public class Order {
+public class Order implements Comparable<Order> {
 	String customer; // Name of the customer
 	String name; // Name of the requested item
 	int count; // Count of the requested items
 
+	public Order(String orderer, String itemName, Integer count) {
+		this.customer = orderer;
+		this.name = itemName;
+		this.count = count;
+	}
+
+	@Override
+	public int compareTo(Order o) {
+		int status;
+		status = this.name.compareTo(o.name);
+		if (status == 0) {
+			status = this.customer.compareTo(o.customer);
+			if (status == 0) {
+				status = this.count - o.count;
+				return status;
+			}
+		}
+		if (status >= 1) {
+			status = 1;
+		}
+		if (status <= -1) {
+			status = -1;
+		}
+
+		return status;
+	}
+
+	public boolean equals(Object object) {
+		return (object instanceof Order && compareTo((Order) object) == 0);
+	}
+
+	public int hashCode() {
+		return toString().hashCode();
+	}
+
+	@Override
+	public String toString() {
+		return name + ": " + customer + ": " + count;
+	}
 }
