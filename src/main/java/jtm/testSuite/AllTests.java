@@ -48,7 +48,7 @@ import jtm.extra12.JNIClassTest;
 
 		// First week
 
-		ConfigurationTest.class, // 1
+//		ConfigurationTest.class, // 1
 		HelloTest.class, // 2
 		ArrayTest.class, // 3
 		BlackKnightTest.class, // 3
@@ -59,7 +59,7 @@ import jtm.extra12.JNIClassTest;
 		InterfaceTests.class, // 6
 		AnimalTests.class, // 7
 		SimpleCalcTests.class, // 8
-		OrdersTests.class, // 9
+//		OrdersTests.class, // 9
 //		StreamEditorTest.class, // 10
 //
 //		// Second week

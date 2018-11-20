@@ -61,7 +61,7 @@ public class Orders implements Iterator<Order> {
 		// * Set of orders should be:
 		// * - ItemN: Customer1,Customer2: 4
 		// */
-		return 0;
+		return null;
 	}
 
 	public void add(Order item) {

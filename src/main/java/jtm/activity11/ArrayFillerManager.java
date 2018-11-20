@@ -12,7 +12,7 @@ public class ArrayFillerManager {
 	static int minValue, maxValue; // min and max (including) of the
 									// array cell
 	private static LinkedList<Thread> threads; // list of threads when parallel
-										// filling is used
+	// filling is used
 
 	// HINT feel free to use main() method to call setUp(), fillStupidly() etc.
 	// for debugging purposes if unit tests doesn't show enough information,
@@ -20,11 +20,15 @@ public class ArrayFillerManager {
 	// Note that main() method will not be used in unit tests.
 
 	public static int[] setUp(int arraySize, int latency, int minValue, int maxValue) {
-		// TODO save passed values in prepared structure
+		// save passed values in prepared structure
 		// initialize array with passed size
 		// initialize list of threads
 		// return reference to the initialized array
-		return null;
+		int[] array = new int[arraySize];
+		ArrayFillerManager.minValue = minValue;
+		ArrayFillerManager.maxValue = maxValue;
+		threads = new LinkedList<Thread>();
+		return array;
 	}
 
 	public static void fillStupidly() {
