@@ -12,8 +12,8 @@ public class ArrayFiller implements Runnable {
 	Random random; // Pseudo-random generator
 
 	public ArrayFiller(int latency, int minValue, int maxValue) {
-
-		// TODO from this constructor call another constructor with more
+		this(latency, minValue, maxValue, 0, 0);
+		// from this constructor call another constructor with more
 		// parameters and fill missing
 		// values with fixed literals
 	}
@@ -33,14 +33,18 @@ public class ArrayFiller implements Runnable {
 	@Override
 	public void run() {
 
-		for (int i = from; from < to; i++) {
-			ArrayFillerManager.array[i] = random.nextInt(maxValue + 1 - minValue);
-			//Thread.sleep(latency);
+		try {
+			Thread.sleep(latency);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		for (int i = from; i <= to; i++) {
+			ArrayFillerManager.array[i] = random.nextInt(maxValue - minValue + 1) + minValue;
 		}
 
 	}
 
-	// TODO when invoked, put filler to sleep for required amount of latency
+	// when invoked, put filler to sleep for required amount of latency
 	// then fill ArrayFillerManager.array from..to cells with random values
 	// in
 	// minValue..maxValue range

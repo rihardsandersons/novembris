@@ -29,16 +29,26 @@ public class ChatServer implements Runnable {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO 1. initialize vector of connections
-		// TODO 2. try to create ServerSocket on specified port
-			// TODO 3. handle exceptions (show exception and exit with error
-			// status)
+
+		connections = new Vector<ChatServer>();
+		try {
+			ServerSocket serverSocket = new ServerSocket(port);
+		} catch (IOException e) {
+			// Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		// 1. initialize vector of connections
+		// 2. try to create ServerSocket on specified port
+		// 3. handle exceptions (show exception and exit with error
+		// status)
 		Socket socket = null;
 		Thread t = null;
 		while (true) {
+			
 			// TODO 1. Try to initialize client Socket in infinite loop with
 			// server.accept() method
-				// TODO 2. handle exceptions
+			// TODO 2. handle exceptions
 			// TODO 3. if socket is initialized successfully, create new Thread
 			// passing new ChatServer(socket) as a parameter for it.
 			// Then invoke start() method for this thread
@@ -60,12 +70,12 @@ public class ChatServer implements Runnable {
 		// HINT: use connections to traverse all clients and invoke
 		// sendMsg(msg)
 		// for them
-				// TODO 2. if message is "quit" or "exit", break loop
-			// TODO 3. handle exceptions
-			// TODO 4. finally close all inputs and outputs of the connection,
-			// and
-			// remove current object reference from connections collection
-			// and handle exceptions for these operations, if necessary
+		// TODO 2. if message is "quit" or "exit", break loop
+		// TODO 3. handle exceptions
+		// TODO 4. finally close all inputs and outputs of the connection,
+		// and
+		// remove current object reference from connections collection
+		// and handle exceptions for these operations, if necessary
 	}
 
 	/**
@@ -79,7 +89,7 @@ public class ChatServer implements Runnable {
 		// TODO 3. Try to add input and output streams to the client socket
 		// HINT: to see output for each entered message, construct PrintWriter
 		// with auto flush option (or use flush() method)
-			// TODO handle exceptions
+		// TODO handle exceptions
 	}
 
 	/**
