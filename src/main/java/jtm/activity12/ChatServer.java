@@ -28,11 +28,11 @@ public class ChatServer implements Runnable {
 	 * 
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		connections = new Vector<ChatServer>();
 		try {
-			ServerSocket serverSocket = new ServerSocket(port);
+			server = new ServerSocket(port);
 		} catch (IOException e) {
 			// Auto-generated catch block
 			e.printStackTrace();
@@ -42,14 +42,14 @@ public class ChatServer implements Runnable {
 		// 2. try to create ServerSocket on specified port
 		// 3. handle exceptions (show exception and exit with error
 		// status)
-		Socket socket = null;
-		Thread t = null;
+		Socket socket = server.accept();
 		while (true) {
-			
-			// TODO 1. Try to initialize client Socket in infinite loop with
+			Thread t = new Thread(new ChatServer(socket));
+			t.start();
+			// 1. Try to initialize client Socket in infinite loop with
 			// server.accept() method
-			// TODO 2. handle exceptions
-			// TODO 3. if socket is initialized successfully, create new Thread
+			// 2. handle exceptions
+			// 3. if socket is initialized successfully, create new Thread
 			// passing new ChatServer(socket) as a parameter for it.
 			// Then invoke start() method for this thread
 		}

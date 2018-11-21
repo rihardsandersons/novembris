@@ -6,30 +6,42 @@ public class Teacher {
 	private String firstName;
 	private String lastName;
 
-	// TODO process passed values
+	// process passed values
 
 	public Teacher(int id, String firstName, String lastName) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
 	}
 
 	public int getID() {
-		// TODO return required value
-		return 0;
+
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getFirstName() {
-		// TODO return required value
-		return "";
+		return firstName;
 	}
 
 	public String getLastName() {
-		// TODO return required value
-		return "";
+		return lastName;
 	}
 
-	// TODO
 	// Override toString() method which returns teacher in form "Name Surname"
 	@Override
 	public String toString() {
-		return "";
+		return firstName + " " + lastName;
 	}
 }
