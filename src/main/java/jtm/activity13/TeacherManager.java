@@ -22,20 +22,6 @@ public class TeacherManager {
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection("jdbc:mysql://localhost/?autoReconnect=true&useSSL=false", "root",
 					"abcd1234");
-
-			// #1 When new TeacherManager is created, create connection to
-			// the
-			// database server:
-			// url = "jdbc:mysql://localhost/?autoReconnect=true&useSSL=false"
-			// user = "root"
-			// pass = "abcd1234"
-			// Hints:
-			// 1. Do not pass database name into url, because some statements
-			// for tests need to be executed server-wise, not just
-			// database-wise.
-			// 2. Set AutoCommit to false and use conn.commit() where necessary
-			// in
-			// other methods
 			conn.setAutoCommit(false);
 		} catch (Exception e) {
 		}
