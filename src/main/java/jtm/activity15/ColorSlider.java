@@ -12,7 +12,7 @@ import javax.swing.event.ChangeListener;
 
 import net.miginfocom.swing.MigLayout;
 
-/*- TODO Install WindowBulder plugin on Eclipse
+/*- Install WindowBulder plugin on Eclipse
  * Then right click on this class in Project Explorer 
  * and choose "Open With" and choose "WindowBuilder editor"
  * Then choose "Design" tab of the editor.
@@ -65,9 +65,27 @@ public class ColorSlider {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new MigLayout("", "[][][grow]", "[][][][][][grow]"));
+
+		redSlider = new JSlider(0, 255, 0);
+		redSlider.setName("redSlider");
+		frame.getContentPane().add(redSlider, "cell 2 0,growx");
+
+		greenSlider = new JSlider(0, 255, 0);
+		greenSlider.setName("greenSlider");
+		frame.getContentPane().add(greenSlider, "cell 2 1,growx");
+
+		blueSlider = new JSlider(0, 255, 0);
+		blueSlider.setName("blueSlider");
+		frame.getContentPane().add(blueSlider, "cell 2 2,growx");
+
+		redSlider.setValue(0);
+		greenSlider.setValue(0);
+		blueSlider.setValue(0);
+
 		txtTest = new JTextArea();
 		txtTest.setName("testArea");
 		txtTest.setText("Test area");
+		txtTest.setBackground(Color.BLACK);
 
 		frame.getContentPane().add(txtTest, "cell 0 3 3 3,grow");
 
@@ -79,7 +97,7 @@ public class ColorSlider {
 		JLabel lblB = new JLabel("B");
 		frame.getContentPane().add(lblB, "cell 1 2");
 
-		/*- TODO add JSliders: redSlider, greenSlider, blueSlider into form
+		/*-add JSliders: redSlider, greenSlider, blueSlider into form
 		 * set their range accordingly from 0 to 255
 		 * Layout them correctly against appropriate labels
 		 * red slider should be in "cell 2 0", green in "cell 2 1",
@@ -88,8 +106,7 @@ public class ColorSlider {
 		 * redSlider, greenSlider and blueSlider.
 		 */
 
-
-		// TODO set initial values of sliders to 0 and background to black
+		// set initial values of sliders to 0 and background to black
 
 		// Make JFrame visible
 		frame.setVisible(true);
@@ -97,12 +114,32 @@ public class ColorSlider {
 	}
 
 	private void add_listeners() {
-		// TODO add event listeners to all sliders and call change_color method
+
+		redSlider.addChangeListener(new ChangeListener() {
+			public void stateChanged(ChangeEvent event) {
+				setBackgroundColor();
+			}
+		});
+
+		greenSlider.addChangeListener(new ChangeListener() {
+			public void stateChanged(ChangeEvent event) {
+				setBackgroundColor();
+			}
+		});
+
+		blueSlider.addChangeListener(new ChangeListener() {
+			public void stateChanged(ChangeEvent event) {
+				setBackgroundColor();
+			}
+		});
+
+		// add event listeners to all sliders and call change_color method
 		// from them
 	}
 
 	private void setBackgroundColor() {
-		// TODO change background id of txtTest object accordingly to
+		txtTest.setBackground(new Color(redSlider.getValue(), greenSlider.getValue(), blueSlider.getValue()));
+		// change background id of txtTest object accordingly to
 		// id slider values. Use Color object for that
 	}
 

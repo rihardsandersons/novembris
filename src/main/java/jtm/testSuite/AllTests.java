@@ -59,15 +59,15 @@ import jtm.extra12.JNIClassTest;
 		InterfaceTests.class, // 6
 		AnimalTests.class, // 7
 		SimpleCalcTests.class, // 8
-		// OrdersTests.class, // 9
-		// StreamEditorTest.class, // 10
+		OrdersTests.class, // 9
+		StreamEditorTest.class, // 10
 		//
 		// // Second week
 		//
 		ArrayFillerManagerTest.class, // 11
 		// ChatServerTest.class, // 12
-		// DatabaseTest.class, // 13
-		// DatabaseUnitTest.class, // 14
+		DatabaseTest.class, // 13
+		DatabaseUnitTest.class, // 14
 		// ColorSliderTest.class, // 15
 		// // 16 — external project — Android application
 		// JettyApplicationTest.class, // 17
