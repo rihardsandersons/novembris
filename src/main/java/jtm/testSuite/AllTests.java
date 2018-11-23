@@ -48,7 +48,7 @@ import jtm.extra12.JNIClassTest;
 
 		// First week
 
-		// ConfigurationTest.class, // 1
+		ConfigurationTest.class, // 1
 		HelloTest.class, // 2
 		ArrayTest.class, // 3
 		BlackKnightTest.class, // 3
@@ -65,18 +65,18 @@ import jtm.extra12.JNIClassTest;
 		// // Second week
 		//
 		ArrayFillerManagerTest.class, // 11
-		// ChatServerTest.class, // 12
+		ChatServerTest.class, // 12
 		DatabaseTest.class, // 13
 		DatabaseUnitTest.class, // 14
-		// ColorSliderTest.class, // 15
-		// // 16 — external project — Android application
-		// JettyApplicationTest.class, // 17
-		// SeleniumWebDriverTest.class, // 17
+		ColorSliderTest.class, // 15
+		// 16 — external project — Android application
+		JettyApplicationTest.class, // 17
+		SeleniumWebDriverTest.class, // 17
 		// GitMergeTest.class, // 18
 		//
 		// // extra activities
 		//
-		// GetOneTest.class, // 1
+		GetOneTest.class, // 1
 		// ZodiacTest.class, // 1
 		// ArrayListMethodsTest.class, // 2
 		// LetsRideTest.class, // 2

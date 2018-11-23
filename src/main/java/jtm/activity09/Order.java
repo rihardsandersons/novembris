@@ -1,10 +1,10 @@
 package jtm.activity09;
 
-/*- TODO #1
+/*- #1
  * Implement Comparable interface with Order class
  * Hint! Use generic type of comparable items in form: Comparable<Order>
  * 
- * TODO #2 Override/implement necessary methods for Order class:
+ * #2 Override/implement necessary methods for Order class:
  * - public Order(String orderer, String itemName, Integer count) — constructor of the Order
  * - public int compareTo(Order order) — comparison implementation according to logic described below
  * - public boolean equals(Object object) — check equality of orders
