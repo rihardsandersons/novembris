@@ -60,7 +60,27 @@
 149   Stay or switch? If I switched, I'd be throwing away the coding I'd already done in exchange for a
 150   better development base.
 151
-
+152   A practical motive to switch was the presence of multiple-protocol support. POP3 is the most
+153   commonly used of the post-office server protocols, but not the only one. Fetchpop and the other
+154   competition didn't do POP2, RPOP, or APOP, and I was already having vague thoughts of perhaps adding
+155   IMAP (Internet Message Access Protocol, the most recently designed and most powerful post-office
+156   protocol) just for fun.
+157
+158   But I had a more theoretical reason to think switching might be as good an idea as well, something I
+159   learned long before Linux.
+160
+161       3. "Plan to throw one away; you will, anyhow." (Fred Brooks, The Mythical Man-Month, Chapter 11)
+162
+163   Or, to put it another way, you often don't really understand the problem until after the first time
+164   you implement a solution. The second time, maybe you know enough to do it right. So if you want to
+165   get it right, be ready to start over at least once [JB].
+166
+167   Well (I told myself) the changes to fetchpop had been my first try. So I switched.
+168
+169   After I sent my first set of popclient patches to Carl Harris on 25 June 1996, I found out that he
+170   had basically lost interest in popclient some time before. The code was a bit dusty, with minor bugs
+171   hanging out. I had many changes to make, and we quickly agreed that the logical thing for me to do
+172   was take over the program.
 173
 174   Without my actually noticing, the project had escalated. No longer was I just contemplating minor
 175   patches to an existing POP client. I took on maintaining an entire one, and there were ideas

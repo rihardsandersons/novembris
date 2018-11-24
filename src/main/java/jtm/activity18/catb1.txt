@@ -31,5 +31,19 @@
 31    agents, and conclude with some exploration of the implications of this insight for the future of
 32    software.
 33
+59    The fact that this bazaar style seemed to work, and work well, came as a distinct shock. As I
+60    learned my way around, I worked hard not just at individual projects, but also at trying to
+61    understand why the Linux world not only didn't fly apart in confusion but seemed to go from strength
+62    to strength at a speed barely imaginable to cathedral-builders.
+63
+64    By mid-1996 I thought I was beginning to understand. Chance handed me a perfect way to test my
+65    theory, in the form of an open-source project that I could consciously try to run in the bazaar
+66    style. So I did—and it was a significant success.
+67
+68    This is the story of that project. I'll use it to propose some aphorisms about effective open-source
+69    development. Not all of these are things I first learned in the Linux world, but we'll see how the
+70    Linux world gives them particular point. If I'm correct, they'll help you understand exactly what it
+71    is that makes the Linux community such a fountain of good software—and, perhaps, they will help you
+72    become more productive yourself.
 73
 74    = The Mail Must Get Through =

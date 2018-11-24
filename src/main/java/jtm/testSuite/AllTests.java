@@ -72,7 +72,7 @@ import jtm.extra12.JNIClassTest;
 		// 16 — external project — Android application
 		JettyApplicationTest.class, // 17
 		SeleniumWebDriverTest.class, // 17
-		// GitMergeTest.class, // 18
+		GitMergeTest.class, // 18
 		//
 		// // extra activities
 		//
