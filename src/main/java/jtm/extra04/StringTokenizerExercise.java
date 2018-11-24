@@ -7,25 +7,43 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
-
+import java.util.Scanner;
 /*-
  * 
  * This class represents string tokenizer exercise.
  */
+
 public class StringTokenizerExercise {
+
 	public String[] splitString(String text, String delimiter) {
-		String[] list = null;
-		// TODO # 1 Split passed text by given delimiter and return array with
+		String[] list = text.split(delimiter);
+		// # 1 Split passed text by given delimiter and return array with
 		// split strings.
 		// HINT: Use System.out.println to better understand split method's
 		// functionality.
 		return list;
+
 	}
 
+	// public static void main(String[] args) {
+	// String text = "Rihards tests";
+	// String delimiter = "R";
+	// String[] list2 = null;
+	// list2 = text.split(delimiter);
+	// for (int i = 0; i < list2.length; i++)
+	// System.out.println(list2[i]);
+	// }
+
 	public List<String> tokenizeString(String text, String delimiter) {
-		// TODO # 2 Tokenize passed text by given delimiter and return list with
+		// # 2 Tokenize passed text by given delimiter and return list with
 		// tokenized strings.
+		StringTokenizer tokenizeS = new StringTokenizer(text, delimiter);
+
 		List<String> list = new ArrayList<>();
+		for (int i = 1; tokenizeS.hasMoreTokens(); i++) {
+			list.add(tokenizeS.nextToken());
+		}
+
 		return list;
 	}
 
